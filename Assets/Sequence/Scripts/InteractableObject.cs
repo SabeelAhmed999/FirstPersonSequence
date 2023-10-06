@@ -8,7 +8,9 @@ public class InteractableObject : MonoBehaviour
     public GameObject particle;
     public void Interact()
     {
-        Debug.Log("Interation");
-        OnObjectInteraction.Raise(this, particle);
+        if(particle!=null)
+            OnObjectInteraction.Raise(this, particle);
+        else
+            OnObjectInteraction.Raise(this, null);
     }
 }

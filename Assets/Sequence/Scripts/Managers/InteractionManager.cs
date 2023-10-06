@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractionManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameEvent OnRestart;
     public InteractableObject interactable;
     private void OnTriggerEnter(Collider other)
     {
@@ -35,7 +36,7 @@ public class InteractionManager : MonoBehaviour
         }
         if (component.gameObject.name == "BoxC")
         {
-
+            OnRestart.Raise(this, null);
         }
     }
 }

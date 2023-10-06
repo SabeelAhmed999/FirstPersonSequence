@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameEvent  restart;
     public GameObject playerRestPos;
     public Transform sequenceTrans;
     // Start is called before the first frame update
@@ -17,13 +16,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-    }
-    public void OnInteraction(Component component, object data)
-    {
-        if (component.gameObject.name == "Stone")
-        {
-            sequenceTrans = playerRestPos.transform;
-        }
     }
     public void OnRestartGame(Component component, object data)
     {

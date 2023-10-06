@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(WriteTextWithDelay(" Find the Red Sphere by the fire place and Pick it then Find the boxes"));
     }
 
     // Update is called once per frame
